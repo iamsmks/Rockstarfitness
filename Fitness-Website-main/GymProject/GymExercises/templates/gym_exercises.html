@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+
+    .container {
+			width: 100%;
+			max-width: 1000px;
+			margin: 0 auto;
+			padding: 50px;
+			background-color: #fff;
+			text-align: center;
+      box-shadow: 10px 10px;
+		}
+</style>
+<br>
+<div class="container">
+    <h1>Workouts</h1>
+    <table class="table">
+        <thead>
+            <tr style="color: black;">
+                <th>Name</th>
+                <th>Muscle Group</th>
+                <th>Tutorial Video Link</th>
+                <th>Difficulty Level</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            {% for i in gexercises %}
+                <tr>
+                    <td>{{ i.name }}</a></td>
+                    <td>{{ i.muscle_group }}</td>
+                    <td>{{ i.video}}</a></td>
+                    <td>{{ i.difficulty_level }}</td>
+                   
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No exercises found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

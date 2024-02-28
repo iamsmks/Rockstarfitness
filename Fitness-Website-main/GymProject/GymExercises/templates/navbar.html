@@ -1,0 +1,57 @@
+{% load static %}
+<link rel="stylesheet" href=
+"https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<style>
+ body {
+			margin: 0;
+			padding: 0;
+      opacity: 0.8;
+			font-family: "Times New Roman", Times, serif;
+			background-color: #f2f2f2;
+		}
+   
+</style>
+
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+
+  <img src="{% static 'images/g.jpg' %}" width="100" height="100">
+  <a class="navbar-brand" href="#"><b>ROCKSTAR <br>Fitness</b></a>
+ 
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <div>
+      <center><i class="material-icons">home </i></center>
+      <a  class="nav-link" href="{% url 'home' %}">HOME</a>
+    </div>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="">Testimonals</a>
+      </li>
+
+      <li class="nav-item">
+      </li>
+
+        <li class="nav-item active">
+        <a class="nav-link" href="{% url 'membership' %}">Membership</a>
+      </li>
+
+      <li class="nav-item active">
+        <a class="nav-link" href="{% url 'contact' %}">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+ 
+  <div>
+    <center><i class="material-icons">shopping_cart_checkout </i></center>
+  <a  class="nav-link" href="{% url 'product_list' %}">Products</a>
+  
+ 
+</div>
+</nav>

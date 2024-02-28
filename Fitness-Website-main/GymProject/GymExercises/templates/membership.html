@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+<body>
+<style>
+       .column {
+  opacity: 1;
+  float: left;
+  width: 30%;
+  padding: 3px;
+    }
+
+     .row::after {
+	opacity: 10;
+  content: "";
+  clear: both;
+  display: table;
+     }
+    .a{
+			width: 100%;
+			max-width: 300px;
+			margin: 0 auto;
+			padding: 50px;
+			background-color: black;
+			text-align: center;
+            box-shadow: 10px 10px;
+            opacity: 0.9;
+    } 
+</style>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<center>
+<div class="row">
+
+  <div class="column">
+   <div class="a">
+     <h1 style="background-color:cyan;">3 Months <br> ₹ 5000</h1>
+     <button class="btn btn-primary" type="submit"><c herf="">PAY</c></button>
+   </div>
+   </div>
+    
+   <br>
+   <div class="column">
+   <div class="a">
+    <h1 style="background-color:cyan;">6 Months <br> ₹ 8000</h1>
+    <button class="btn btn-primary" type="submit"><c herf="">PAY</c></button>
+   </div>
+    </div>
+
+   <br>
+   <div class="column">
+   <div class="a">
+    <h1 style="background-color:cyan">12 Months <br>  ₹ 10000</h1>
+    <button class="btn btn-primary" type="submit"><c herf="">PAY</c></button>
+    </div>
+    </div>
+
+ </div>
+ </div>
+
+<br>
+</center>
+</body>
+</html>
+        {% endblock %}

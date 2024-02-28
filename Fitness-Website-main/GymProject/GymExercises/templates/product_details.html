@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <div class="row">
+        <div class="col-md-6">
+            <img class="card-img-top" src="{{ object.image.url }}" alt="{{ object.name }}">
+        </div>
+        <div class="col-md-6">
+            <h2>{{ object.name }}</h2>
+            <p class="card-text">{{ object.description }}</p>
+            <div class="d-flex justify-content-between align-items-center">
+                <span class="text-muted">${{ object.price }}</span>
+                <a href="#" class="btn btn-lg btn-primary">Add to Cart</a>
+            </div>
+        </div>
+    </div>
+{% endblock %}

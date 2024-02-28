@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>{{ exercise.name }}</h1>
+    <p><strong>Muscle Group:</strong> {{ exercise.muscle_group }}</p>
+    <p><strong>Difficulty Level:</strong> {{ exercise.difficulty_level }}</p>
+    <p><strong>Description:</strong> {{ exercise.description }}</p>
+    <p><strong>Instructions:</strong> {{ exercise.instructions }}</p>
+    <a href="{% url 'exercise_update' pk=exercise.pk %}">Edit</a>
+    <form action="{% url 'exercise_delete' pk=exercise.pk %}" method="POST">
+        {% csrf_token %}
+        <input type="submit" value="Delete">
+    </form>
+{% endblock %}

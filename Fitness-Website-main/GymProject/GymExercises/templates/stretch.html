@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Exercise List</h1>
+    <table class="table">
+        <thead>
+            <tr style="color: black;">
+                <th>Name</th>
+                <th>Muscle Group</th>
+                <th>Difficulty Level</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for exercise in exercises %}
+                <tr>
+                    <td><a href="{% url 'exercise_detail' pk=exercise.pk %}">{{ exercise.name }}</a></td>
+                    <td>{{ exercise.muscle_group }}</td>
+                    <td>{{ exercise.difficulty_level }}</td>
+                </tr>
+            {% empty %}
+                <tr>
+                    <td colspan="3">No exercises found.</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% endblock %}
